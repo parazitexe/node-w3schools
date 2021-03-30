@@ -1,0 +1,20 @@
+{
+  "name": "node-w3schools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parazitexe/node-w3schools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parazitexe/node-w3schools/issues"
+  },
+  "homepage": "https://github.com/parazitexe/node-w3schools#readme"
+}
