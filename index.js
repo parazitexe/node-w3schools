@@ -6,6 +6,8 @@ var url = require('url');
 var events = require('events');
 var formidable = require('formidable');
 var mv = require('mv');
+var nodemailer = require('nodemailer');
+
 
 
 
@@ -63,7 +65,7 @@ eventEmitter.on('filin', fuilinHandler);
 eventEmitter.emit('filin');*/
 
 
-var http = require('http');
+/*
 
 http.createServer(function (req, res) {
     if (req.url == '/fileupload') {
@@ -88,7 +90,31 @@ http.createServer(function (req, res) {
         res.write('</form>');
         return res.end();
     }
-}).listen(8080);
+}).listen(8080);*/
 
 
 
+
+
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: '***********@gmail.com',
+        pass: '*********'
+    }
+});
+
+var mailOptions = {
+    from: '***********@gmail.com',
+    to: '***********@gmail.com',
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+        console.log(error);
+    } else {
+        console.log('Email sent: ' + info.response);
+    }
+});
