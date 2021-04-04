@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/parazitexe/node-w3schools/issues"
   },
-  "homepage": "https://github.com/parazitexe/node-w3schools#readme"
+  "homepage": "https://github.com/parazitexe/node-w3schools#readme",
+  "dependencies": {
+    "formidable": "^1.2.2",
+    "mv": "^2.1.1"
+  }
 }
