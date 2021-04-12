@@ -9,6 +9,12 @@ MongoClient.connect(url, function(err, db) {
 
     var myFilins = db.db("myFilins");
 
+    myFilins.collection("filins-user").find({}).limit(2).toArray( function(err, res) {
+        if (err) throw err;
+        console.log(res);
+        db.close();
+    })
+
     db.close();
 
 });
